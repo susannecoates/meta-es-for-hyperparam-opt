@@ -1,0 +1,90 @@
+[
+  {
+    "generation": 0,
+    "fitness": -0.81,
+    "learning_rate": 0.00037990418706596344,
+    "dropout": 0.48712797318029527,
+    "batch_size": 32,
+    "improved": true
+  },
+  {
+    "generation": 1,
+    "fitness": -0.746,
+    "learning_rate": 0.00038487132859607576,
+    "dropout": 0.48643665167443934,
+    "batch_size": 64,
+    "improved": false
+  },
+  {
+    "generation": 2,
+    "fitness": -0.746,
+    "learning_rate": 0.00038487132859607576,
+    "dropout": 0.48643665167443934,
+    "batch_size": 64,
+    "improved": false
+  },
+  {
+    "generation": 3,
+    "fitness": -0.746,
+    "learning_rate": 0.00038487132859607576,
+    "dropout": 0.48643665167443934,
+    "batch_size": 64,
+    "improved": false
+  },
+  {
+    "generation": 4,
+    "fitness": -0.746,
+    "learning_rate": 0.00038487132859607576,
+    "dropout": 0.48643665167443934,
+    "batch_size": 64,
+    "improved": false
+  },
+  {
+    "generation": 5,
+    "fitness": -0.766,
+    "learning_rate": 0.0003839772431206555,
+    "dropout": 0.48656108954549343,
+    "batch_size": 64,
+    "improved": false
+  },
+  {
+    "generation": 6,
+    "fitness": -0.766,
+    "learning_rate": 0.0003839772431206555,
+    "dropout": 0.48656108954549343,
+    "batch_size": 64,
+    "improved": false
+  },
+  {
+    "generation": 7,
+    "fitness": -0.766,
+    "learning_rate": 0.0003839772431206555,
+    "dropout": 0.48656108954549343,
+    "batch_size": 64,
+    "improved": false
+  },
+  {
+    "generation": 8,
+    "fitness": -0.766,
+    "learning_rate": 0.0003839772431206555,
+    "dropout": 0.48656108954549343,
+    "batch_size": 64,
+    "improved": false
+  },
+  {
+    "generation": 9,
+    "fitness": -0.766,
+    "learning_rate": 0.0003839772431206555,
+    "dropout": 0.48656108954549343,
+    "batch_size": 64,
+    "improved": false
+  },
+  {
+    "generation": 10,
+    "fitness": -0.802,
+    "learning_rate": 0.00038324409303081095,
+    "dropout": 0.48666312859975774,
+    "batch_size": 64,
+    "improved": false
+  }
+]
