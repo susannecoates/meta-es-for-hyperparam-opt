@@ -7,9 +7,9 @@ os.environ["PYTORCH_MPS_HIGH_WATERMARK_RATIO"] = "0"
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
 os.environ["TRANSFORMERS_NO_ADVISORY_WARNINGS"] = "1"
 
-# Set HuggingFace cache directory to local `.cache`
-os.environ["TRANSFORMERS_CACHE"] = os.path.join(os.path.dirname(__file__), ".cache")
-os.environ["HF_DATASETS_CACHE"] = os.path.join(os.path.dirname(__file__), ".cache")
+# Set HuggingFace cache directory to local `../.cache`
+os.environ["TRANSFORMERS_CACHE"] = os.path.join(os.path.dirname(__file__), "../.cache")
+os.environ["HF_DATASETS_CACHE"] = os.path.join(os.path.dirname(__file__), "../.cache")
 
 login(token=os.getenv("HUGGINGFACE_TOKEN"))
 

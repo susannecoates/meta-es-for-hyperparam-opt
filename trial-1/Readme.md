@@ -1,5 +1,4 @@
-# README
-# Hyperparameter Optimization with Meta-Evolution Strategies (Meta-ES)
+# Trial 1: Hyperparameter Optimization with Meta-Evolution Strategies (Meta-ES)
 
 ## Abstract
 
@@ -9,7 +8,7 @@ This project implements a Meta-Evolution Strategy (Meta-ES) to optimize the hype
 
 Hyperparameter optimization is a critical step in training neural models, especially transformer-based architectures, where parameters like learning rate and dropout significantly affect generalization. Traditional grid and random search approaches can be inefficient, particularly when constrained by limited compute resources.
 
-To address this, we implement a (1+1) Meta-Evolution Strategy inspired by the work of Kramer[1], where an outer evolutionary algorithm mutates hyperparameters and evaluates their fitness through an inner optimizer loop. The model under evaluation is a MobileBERT variant, chosen for its efficiency on CPU-only systems.
+To address this, we implement a (1+1) Meta-Evolution Strategy mased on the work of Kramer\[1], where an outer evolutionary algorithm mutates hyperparameters and evaluates their fitness through an inner optimizer loop. The model under evaluation is a MobileBERT variant, chosen for its efficiency on CPU-only systems.
 
 ## Methods
 
@@ -39,8 +38,31 @@ The Meta-ES optimizes the following:
 ### Optimization Loop
 
 * **Outer loop**: Meta-Evolution Strategy ((1+1)-ES)
-* **Mutation**: Gaussian perturbation with dynamic mutation strength (`sigma_m`)
+
+* **Mutation**: Gaussian perturbation with dynamic mutation strength (`\sigma_m`)
+
+  $$
+  \theta' = \theta + \sigma_m \cdot \mathcal{N}(0, 1)
+  $$
+
 * **Adaptation Rule**: Rechenberg's 1/5th success rule
+
+  Every $k$ mutation trials:
+
+  $$
+  \text{success rate} = \frac{\text{success\_count}}{k}
+  $$
+
+  Then:
+
+  $$
+  \sigma_m \leftarrow \sigma_m \cdot
+  \begin{cases}
+  1.2 & \text{if success rate} > 0.2 \\
+  0.82 & \text{otherwise}
+  \end{cases}
+  $$
+
 * **Early Stopping**: Patience-based (10 generations without improvement)
 
 ### Evaluation Metric
@@ -78,10 +100,11 @@ This setup is CPU-friendly and ready for porting to Jetson Nano or similar ARM-b
 
 ---
 
-**Authors**: Project implemented by Susanne Coates with support from HuggingFace Transformers and the GLUE benchmark dataset.
+**Authors**: Project implemented by Susanne Coates using the HuggingFace Transformers and the GLUE benchmark dataset.
 
 **License**: MIT or Apache 2.0 depending on deployment context.
 
 ## References
- 1. Kramer, O. (2025). Enhancing Evolutionary Algorithms through Meta-Evolution Strategies. In *Proceedings of the 2025 IEEE Conference on Artificial Intelligence (CAI)* IEEE. ISBN: 979-8-3315-2400-5
+
+1. Kramer, O. (2025). Enhancing Evolutionary Algorithms through Meta-Evolution Strategies. In *Proceedings of the 2025 IEEE Conference on Artificial Intelligence (CAI)* IEEE. ISBN: 979-8-3315-2400-5
 
