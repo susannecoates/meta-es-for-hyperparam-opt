@@ -4,7 +4,7 @@ This project implements a Meta-Evolution Strategy (Meta-ES) to optimize hyperpar
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### 1. Clone the repository
 
@@ -39,7 +39,7 @@ pip install huggingface-hub
 
 ---
 
-## 🔐 Hugging Face Token (Required for some models)
+## Hugging Face Token (Required for some models)
 
 Create a `.env` file or export your token:
 
@@ -56,12 +56,13 @@ login(token="your_hf_token")
 
 ---
 
-## 🚀 Running the Program
+## Running the Program
 
-To launch the hyperparameter search with Meta-ES:
+For example, to launch the hyperparameter search with Meta-ES for the 1st experiment:
 
 ```bash
-python3 trial-1.py
+cd experiment-1
+python3 experiment-1.py
 ```
 
 During execution:
@@ -72,13 +73,7 @@ During execution:
 
 ---
 
-## 📊 Optional: Plot Final Results from Log
-
-After training, you can visualize the optimization trajectory from `meta_es_log.json` by adapting the plotting section in the script.
-
----
-
-## 🧩 Requirements Summary
+## Requirements Summary
 
 * Python 3.8+
 * PyTorch (with CUDA optional)
@@ -98,14 +93,12 @@ After training, you can visualize the optimization trajectory from `meta_es_log.
 
 ---
 
-## 📜 License
+## License
 
 MIT License. See `LICENSE` file for details.
-This project is for educational purposes and is not affiliated with Hugging Face or any other organization. The code is provided "as-is" without warranty of any kind. Use at your own risk. The author is not responsible for any damages or losses resulting from the use of this code. By using this code, you agree to the terms of the license.
 
 ---
 
-## 👩‍💻 Author
+## Author
 
-Developed by Susanne Coates using Hugging Face Transformers and the GLUE benchmark dataset. The work is is inspired by the conference papers, "Enhancing Evolutionary Algorithms through
-Meta-Evolution Strategies," and "Evolutionary Cognitive Prompting for Enhancing the Capabilities of Language Models," both by Oliver Kramer. 
+The work in this project was implemented by Dr. Susanne Coates and is based on the conference papers, "Enhancing Evolutionary Algorithms through Meta-Evolution Strategies," and "Evolutionary Cognitive Prompting for Enhancing the Capabilities of Language Models," both by Prof. Dr. Oliver Kramer, Carl v. Ossietzky University of Oldenburg, Germany.

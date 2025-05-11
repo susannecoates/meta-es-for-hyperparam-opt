@@ -1,5 +1,5 @@
-# Trial 1: Hyperparameter Optimization with Meta-Evolution Strategies (Meta-ES)
-
+# Experiment 1: Hyperparameter Optimization with Meta-Evolution Strategies (Meta-ES)
+Susanne D. Coates
 ## Abstract
 
 This project implements a Meta-Evolution Strategy (Meta-ES) to optimize the hyperparameters of a transformer-based text classification model on the SST-2 sentiment analysis task from the GLUE benchmark. The Meta-ES algorithm adapts learning rate, dropout rate, and batch size across generations to maximize validation accuracy. The code includes real-time visualization of optimization progress and supports deployment on constrained environments. The best configuration identified achieved a validation accuracy of 81% using the lightweight `google/mobilebert-uncased` model.
@@ -8,7 +8,7 @@ This project implements a Meta-Evolution Strategy (Meta-ES) to optimize the hype
 
 Hyperparameter optimization is a critical step in training neural models, especially transformer-based architectures, where parameters like learning rate and dropout significantly affect generalization. Traditional grid and random search approaches can be inefficient, particularly when constrained by limited compute resources.
 
-To address this, we implement a (1+1) Meta-Evolution Strategy mased on the work of Kramer\[1], where an outer evolutionary algorithm mutates hyperparameters and evaluates their fitness through an inner optimizer loop. The model under evaluation is a MobileBERT variant, chosen for its efficiency on CPU-only systems.
+To address this, we implement a (1+1) Meta-Evolution Strategy based on the work of Kramer\[1], where an outer evolutionary algorithm mutates hyperparameters and evaluates their fitness through an inner optimizer loop. The model under evaluation is a MobileBERT variant, chosen for its efficiency on CPU-only systems.
 
 ## Methods
 
@@ -100,11 +100,9 @@ This setup is CPU-friendly and ready for porting to Jetson Nano or similar ARM-b
 
 ---
 
-**Authors**: Project implemented by Susanne Coates using the HuggingFace Transformers and the GLUE benchmark dataset.
-
-**License**: MIT or Apache 2.0 depending on deployment context.
+**Authors**: Project implemented by Susanne Coates
+**License**: MIT License. See the `LICENSE` file for details.
 
 ## References
 
 1. Kramer, O. (2025). Enhancing Evolutionary Algorithms through Meta-Evolution Strategies. In *Proceedings of the 2025 IEEE Conference on Artificial Intelligence (CAI)* IEEE. ISBN: 979-8-3315-2400-5
-
